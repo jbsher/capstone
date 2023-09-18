@@ -3,15 +3,15 @@
 
 ## Problem Statement
 
-With the rise of digital communication platforms and smart home systems, there's an increasing need for efficient hand gesture recognition (HGR) systems that can be integrated across different applications. Our objective is to harness the potential of the expansive HaGRID dataset to devise a robust HGR system that can recognize and categorize various hand gestures in diverse environments.
-
-HaGRID is a vast repository of FullHD RGB images encompassing 18 distinct hand gestures, collected from a diverse group of individuals spanning various ages and backgrounds. These images encapsulate a plethora of scenarios ranging from different indoor lighting conditions to more challenging setups like having subjects positioned against a window. Additionally, the dataset provides the complexity of recognizing gestures even when there's another non-gesturing hand present in the frame, as represented by the "no_gesture" class.
+With the rise of digital communication platforms and smart home systems, there's an increasing need for efficient hand gesture recognition (HGR) systems that can be integrated across different applications. Our objective is to take a subset of the expansive HaGRID dataset to devise a HGR system that can recognize and categorize various hand gestures in diverse environments.
 
 To achieve our goal, we will utilize the annotations provided in the form of bounding boxes, landmarks, and associated metadata. By the end of our project, our aim is to have an HGR system that is not just accurate but is also versatile, making it seamlessly integrable across platforms like video conferencing tools, home automation interfaces, and automotive systems.
 
 ## Dataset
 
 **HaGRID - Hand Gesture Recognition Image Dataset**
+
+HaGRID is a vast repository of FullHD RGB images encompassing 18 distinct hand gestures, collected from a diverse group of individuals spanning various ages and backgrounds. These images encapsulate a plethora of scenarios ranging from different indoor lighting conditions to more challenging setups like having subjects positioned against a window. Additionally, the dataset provides the complexity of recognizing gestures even when there's another non-gesturing hand present in the frame, as represented by the "no_gesture" class.
 
 **Images:**
 - Subset of 1,000 images per category, totaling 18,000 images (from 552,992 total FullHD images available).
