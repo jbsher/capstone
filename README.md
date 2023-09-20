@@ -44,8 +44,6 @@ HaGRID is a vast repository of FullHD RGB images encompassing 18 distinct hand g
 
 ## Modeling
 
--Dataset Preparation: The dataset consists of hand gesture images with annotations for different gesture classes, including 'call,' 'fist,' 'peace,' and more.
-
 -Data Augmentation: Image data augmentation techniques were applied, such as resizing, normalization, and converting to tensors, to prepare the dataset for training.
 
 -Custom Dataset Class: A custom GestureDataset class was implemented to handle data loading, annotation parsing, and transformation.
