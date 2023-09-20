@@ -44,17 +44,51 @@ HaGRID is a vast repository of FullHD RGB images encompassing 18 distinct hand g
 
 ## Modeling
 
-- Utilized transfer learning with TensorFlow.
-- Used the pre-trained ssdlite320 model as the starting point for the TensorFlow model.
+-Dataset Preparation: The dataset consists of hand gesture images with annotations for different gesture classes, including 'call,' 'fist,' 'peace,' and more.
+
+-Data Augmentation: Image data augmentation techniques were applied, such as resizing, normalization, and converting to tensors, to prepare the dataset for training.
+
+-Custom Dataset Class: A custom GestureDataset class was implemented to handle data loading, annotation parsing, and transformation.
+
+-Model Selection: The chosen model architecture is the SSDLite320 with MobileNetV3 backbone, pretrained on a large-scale dataset. It was adapted for gesture recognition with class-specific output heads.
+
+-Transfer Learning: Transfer learning was applied by initializing the model with pretrained weights, which boosts training efficiency.
+
+-Training and Validation Split: The dataset was split into training and validation sets based on user IDs to ensure diverse representation in both sets.
+
+-Training Loop: The model was trained using stochastic gradient descent (SGD) with a learning rate scheduler and warmup phase. Losses were computed for object detection tasks.
+
+-Evaluation Metrics: Evaluation metrics, including mean average precision (MAP) and loss were computed on a separate test dataset to assess model performance.
+
+Model Saving: Model checkpoints were saved at the end of each epoch to track training progress and enable model reusability. The model ran for 10 epochs.
+
+Results and Metrics: The modeling process yielded insights into gesture recognition performance, as indicated by MAP, precision, recall, and F1-score metrics, which are critical for assessing the model's practical use.
 
 ## User Interface (UI)
 
-**[Add details about your UI here]**
+- Created a Streamlit app that allows a user to upload an image in .jpg, .jpeg, .png formats and get a prediction with a boundary box.
 
 ## Conclusion
 
-**[Summarize your project's findings and outcomes]**
+- RGB values in descending order are red, green, blue.
 
-[Additional sections can be added as needed for your project's documentation.]
+- The distribution of bounding box heights was slightly higher than bounding box width, as to be expected with hand gestures.
 
-This README provides an overview of the HaGRID Hand Gesture Recognition Dataset project, including the problem statement, dataset details, preprocessing, exploratory data analysis, modeling, and user interface. For more detailed information and updates, refer to the project documentation and code.
+- The heatmap of bounding box starting locations had two major hotspots, one on the upper left and one on the upper right, with two smaller hotspots below them. Also this is to be expected if photos are generally taken with people standing in the middle of the frame.
+
+- The left hand is the leading hand in the picture roughly 1000 more times than right leading hand.
+
+- Mean pairwise landmark distances were closer towards the center as compared to the edges.
+
+- The test loss during training converged around epoch 6 at around 0.08.
+
+- After running our training, we were able to create a model with a MAP of 0.37. We then created a simple Streamlit app that showcases the functionality of the model.
+
+## Reflection/Improvements
+
+- This basic model could be optimized if the entire 522,992 image dataset was included. Other factors include cost and time constraints posed by renting GPU, as well as inexperience on my part.
+
+- Other pretrained models should be tested on the data for further testing.
+
+- Recommend taking a very small sample of pictures to create a model to cut down on time and cost, then including the entire dataset once everything is running as expected.
+
