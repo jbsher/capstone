@@ -52,7 +52,7 @@ HaGRID is a vast repository of FullHD RGB images encompassing 18 distinct hand g
 
 -Transfer Learning: Transfer learning was applied by initializing the model with pretrained weights, which boosts training efficiency.
 
--Training and Validation Split: The dataset was split into training and validation sets based on user IDs to ensure diverse representation in both sets.
+-Training and Validation Split: The dataset was split into training and test sets based on user IDs to ensure diverse representation in both sets.
 
 -Training Loop: The model was trained using stochastic gradient descent (SGD) with a learning rate scheduler and warmup phase. Losses were computed for object detection tasks.
 
