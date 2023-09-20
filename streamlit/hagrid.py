@@ -14,7 +14,7 @@ from PIL import ImageFont
 
 
 # Define the path to the model weights file in Google Drive
-google_drive_url = "https://drive.google.com/file/d/1-bfDlnoVLGGKTz2eV-Vkhy15JXchGjoJ/view?usp=sharing"
+google_drive_url = "https://drive.google.com/file/d/1-GkOFsCx3aMtrYLBjiQyUoc5olgQF2xx/view?usp=sharing"
 
 # Function to download the model weights from Google Drive
 def download_model_weights():
